@@ -5,7 +5,10 @@ public class Polynomial {
         coefficients[0] = 0;
     }
     public Polynomial(double[] arr) {
-        coefficients = arr;
+        coefficients = new double[arr.length];
+	for (int i = 0; i < arr.length; i++) {
+	    coefficients[i] = arr[i];
+	}
     }
     public Polynomial add(Polynomial x) {
         int arr_len = Math.max(coefficients.length, x.coefficients.length);
