@@ -12,10 +12,10 @@ public class Polynomial {
     }
     public Polynomial add(Polynomial x) {
         int arr_len = Math.max(coefficients.length, x.coefficients.length);
-	int arr_min_len = Math.min(coefficients.length, x.coefficients.length);
+	int min_arr_len = Math.min(coefficients.length, x.coefficients.length);
         double [] new_coefficients = new double[arr_len];
         for (int i = 0; i < arr_len; i++) {
-            if (i < arr_min_len) {
+            if (i < min_arr_len) {
                 new_coefficients[i] = coefficients[i] + x.coefficients[i];
             }
             else if (coefficients.length < x.coefficients.length) {
